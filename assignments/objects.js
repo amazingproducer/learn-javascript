@@ -76,9 +76,10 @@ kennan.speak = function(){return("Hello, my name is Kennan!")} //How am I suppos
 console.log(kennan.speak());
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-antonietta.multiplyNums = function(a, b){
-  return(a*b);
+antonietta.multiplyNums = (a, b) => {
+  return(a*b)
 }
+
 console.log(antonietta.multiplyNums(3,4));
 
 // === Great work! === Head over to the the arrays.js. You may come back and attempt the Stretch Challenge once you have completed the challenges in arrays.js and function-conversion.js.
