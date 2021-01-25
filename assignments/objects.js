@@ -76,9 +76,8 @@ kennan.speak = () => "Hello, my name is Kennan!" //How am I supposed to make it 
 console.log(kennan.speak());
 
 // Antonietta loves math, give her the ability to multiply two numbers together and return the product. Use the console.log provided as a hint.
-antonietta.multiplyNums = (a, b) => {
-  return(a*b)
-}
+antonietta.multiplyNums = (a, b) => a * b;
+
 
 console.log(antonietta.multiplyNums(3,4));
 
