@@ -120,7 +120,7 @@ for (let i = 0; i < carYears.length; i++) {
 console.log(oldCars.length);
 
 // Stretch challenge
-const filteredOldCars = inventory.filter(i => i.car_year < 2000).length;
+const filteredOldCars = inventory.filter(i => i.car_year < 2000).length; // I bet they want me to use reduce here
 console.log(`Number of Old Cars: ${filteredOldCars}`);
 
 // ==== Challenge 6 ====
