@@ -82,8 +82,15 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
-
-// Problem 2
-
-// Problem 3
+// Problem 1 - Let's send an extra shirt to everyone who sent a greater donation than 100. Create a list of such runners and call them bronzeRunners
+let bronzeRunners = runners.filter(i => i.donation > 100);
+console.log(`Runners: ${runners.length}, Bronze Runners: ${bronzeRunners.length}`);
+// Problem 2 - we invited 50 companies, and have a list of 50 runners, but we don't have representatives from 50 companies. Find out how many unique companies have representatives.
+let representedCompaniesRaw = runners.map(i => i.company_name);
+let representedCompanies = representedCompaniesRaw.filter((v, i) => representedCompaniesRaw.indexOf(v) === i).length;
+console.log(`Total Companies Invited: 50, Total Companies Responded: ${representedCompanies}`);
+// Problem 3 - Let's send an email to each runner who hasn't reach bronze level yet. Make a list of email addresses of runners with a donation below 100.
+let cheapRunners = runners.filter(i => i.donation < 100);
+let cheapRunnerEmails = [];
+cheapRunners.forEach(runner => cheapRunnerEmails.push(runner.email));
+console.log(cheapRunnerEmails);
