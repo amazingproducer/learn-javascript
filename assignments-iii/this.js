@@ -15,7 +15,7 @@
 let windowBinding = function(name) {
     console.log(`This is an example of ${this.name} binding.`);
 };
-global.name = "window";
+window.name = "window";
 windowBinding();
 
 // Principle 2
