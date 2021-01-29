@@ -52,8 +52,17 @@ class CharacterStats extends GameObject {
     super(statsAttrs);
     this.healthPoints = statsAttrs.healthPoints;
   }
-  takeDamage () {
-    return `${this.name} took damage.`
+  takeDamage (amount) {
+    if(!amount) {
+      amount = 0;
+    }
+    this.healthPoints = this.healthPoints - amount;
+    if(this.healthPoints <= 0) {
+      this.result = this.destroy();
+    } else {
+      this.result = `${this.name} has ${this.healthPoints} health points remaining.`;
+    }
+    return `${this.name} took ${amount} damage. ${this.result}`
   }
 }
 
@@ -110,9 +119,8 @@ class Humanoid extends CharacterStats {
     super(heroAttrs);
   }
   dealDamage(target) {
-    console.log(`${this.name}'s ${this.weapons[0]} injures ${target.name}, dealing damage!`);
-    // TODO make some damage calculations here
-    return target.takeDamage();
+    console.log(`${this.name}'s ${this.weapons[0]} injures ${target.name}!`);
+    return target.takeDamage(Math.floor(Math.random() * 5));
   }
 }
   
@@ -132,8 +140,8 @@ class Villain extends Humanoid {
     super(villainAttrs);
   }
   takeAppendage(target) {
-    // TODO make some damage calculations
-    return `${this.name} attempted to take an appendage from ${target.name}, dealing damage!`;
+    console.log(`${this.name} attempted to take an appendage from ${target.name}!`);
+    return target.takeDamage(Math.floor(Math.random() * 3));
   }
 }
 
@@ -152,7 +160,7 @@ const heroCharacter = new Hero({
       width: 1,
       height: 2,
     },
-    healthPoints: 10,
+    healthPoints: 12,
     name: 'Bruce Campbell',
     team: 'Raimi',
     weapons: [
@@ -228,25 +236,35 @@ const heroCharacter = new Hero({
     });
   
     
-    console.log(mage.createdAt); // Today's date
-    console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
-    console.log(swordsman.healthPoints); // 15
-    console.log(mage.name); // Bruce
-    console.log(swordsman.team); // The Round Table
-    console.log(mage.weapons); // Staff of Shamalama
-    console.log(archer.language); // Elvish
-    console.log(archer.greet()); // Lilith offers a greeting in Elvish.
-    console.log(mage.takeDamage()); // Bruce took damage.
-    console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
+    // console.log(mage.createdAt); // Today's date
+    // console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
+    // console.log(swordsman.healthPoints); // 15
+    // console.log(mage.name); // Bruce
+    // console.log(swordsman.team); // The Round Table
+    // console.log(mage.weapons); // Staff of Shamalama
+    // console.log(archer.language); // Elvish
+    // console.log(archer.greet()); // Lilith offers a greeting in Elvish.
+    // console.log(mage.takeDamage()); // Bruce took damage.
+    // console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
     
     // Previous STRETCH TESTS
-   console.log(heroCharacter.dimensions);
-   console.log(heroCharacter.weapons);
-   console.log(heroCharacter.greet());
-   console.log(heroCharacter.takeDamage());
-  
-    console.log(heroCharacter.dealDamage(villainCharacter));
-    console.log(villainCharacter.takeAppendage(heroCharacter));
-    console.log(heroCharacter.dealDamage(villainCharacter));
-    console.log(heroCharacter.dealDamage(villainCharacter));
-    console.log(villainCharacter.destroy());
+  //  console.log(heroCharacter.dimensions);
+  //  console.log(heroCharacter.weapons);
+  //  console.log(heroCharacter.greet());
+  //   console.log(heroCharacter.takeDamage());
+  //   console.log(heroCharacter.dealDamage(villainCharacter));
+  //   console.log(villainCharacter.takeAppendage(heroCharacter));
+  //   console.log(heroCharacter.dealDamage(villainCharacter));
+  //   console.log(heroCharacter.dealDamage(villainCharacter));
+
+
+while(villainCharacter.healthPoints >= 0) {
+  console.log(heroCharacter.dealDamage(villainCharacter));
+  if(villainCharacter.healthPoints <= 0) {
+    return console.log(`${villainCharacter.name} has been destroyed!`);
+  }
+  console.log(villainCharacter.takeAppendage(heroCharacter));
+  if(heroCharacter.healthPoints <= 0) {
+    return console.log(`${heroCharacter.name} has been killed.`);
+  }
+}
