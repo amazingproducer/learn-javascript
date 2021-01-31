@@ -107,3 +107,24 @@ document.querySelector("div.container nav").appendChild(navFaceBook);
 // Make Nav Green **AFTER** declaring new items
 document.querySelectorAll("body div.container header nav a").forEach(i => i.style.color = "green")
 
+// STRETCH - Make a button to update the DOM according to new data
+// Do I dare attempt to implement dark mode toggle?
+
+let toggleDarkMode = function() {
+  let prevBackgroundColor = document.querySelector("body").style.backgroundColor
+  console.log(`Previous color: ${prevBackgroundColor}`);
+  if(prevBackgroundColor === "white" || prevBackgroundColor === "") {
+    document.querySelectorAll("div.container").forEach(i => i.style.color = "white")
+    document.querySelectorAll("body").forEach(i => i.style.backgroundColor = "black")
+    // oh no, i have to invert the logo color too
+    logo.style.filter = "invert(100%)"
+  } else {
+    document.querySelectorAll("div.container").forEach(i => i.style.color = "black")
+    document.querySelectorAll("body").forEach(i => i.style.backgroundColor = "white")    
+    logo.style.filter = "none"
+  }
+}
+
+// Add this Dark Mode stuff to the existing button
+document.querySelector("div.cta-text button").textContent = "Toggle Dark Mode";
+document.querySelector("div.cta-text button").addEventListener("click", toggleDarkMode);
