@@ -27,7 +27,7 @@ function genericHandler(event) {
         return console.log(`Resize event detected; size is now ${event.target.innerHeight}x${event.target.innerWidth}`)
     }
     console.log(`${event.type} event triggered for ${event.target}.`)
-    console.log(event)
+//    console.log(event)
 }
 // react to double-clicking paragraph elements in the destination picks
 destinationPicks.forEach(element => element.querySelectorAll("p").forEach(paragraph => paragraph.addEventListener("dblclick", genericHandler)))
@@ -65,3 +65,23 @@ sectionText.forEach(element => element.querySelectorAll("h2").forEach(header => 
 
 // *** Prevent navigation elements from refreshing the page
 document.querySelectorAll("a.nav-link").forEach(element => element.addEventListener("click", event => event.preventDefault()))
+
+function animatedHandler(event) {
+    // *** Stretch: try using green sock library to animate elements
+    if (event.type == "mouseenter") {
+        return gsap.to(event.target, {duration: 0.5, scale: 1.25})
+    }
+    if (event.type == "mouseleave") {
+        return gsap.to(event.target, {duration: 0.75, scale: 1})
+    }
+}
+
+function animatedFlipHandler(event) {
+    gsap.to(event.target, {duration: 0.5, scale: .5, rotationX: 360})
+    setTimeout(() => {
+        gsap.to(event.target, {duration: 1.5, scale: 1, rotationX: -360})        
+    }, 500);
+}
+document.querySelector("header.intro img").addEventListener("mouseenter", animatedFlipHandler)
+document.querySelectorAll("div.img-content img").forEach(element => element.addEventListener("mouseenter", animatedHandler))
+document.querySelectorAll("div.img-content img").forEach(element => element.addEventListener("mouseleave", animatedHandler))
