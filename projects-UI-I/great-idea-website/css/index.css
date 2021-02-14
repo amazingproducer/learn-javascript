@@ -64,3 +64,25 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Your code starts here! */
+nav {
+	text-align: center;
+}
+nav a:link {
+	display:inline-block;
+	text-decoration:none;
+	color:grey;
+	padding-inline: 3%;
+}
+
+section.big-text-with-button-and-round-image {
+	text-align: center;
+}
+
+section.big-text-with-button-and-round-image div {
+	display: inline-block;
+	padding-block: 3%;
+}
+
+section.big-text-with-button-and-round-image h1 {
+	font-size: 72px;
+}
