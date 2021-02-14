@@ -65,31 +65,49 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 /* I have no idea what I'm doing because the design image has no annotations */
-nav {
+header {
+	margin-top: 28px;
+	display: block;
 	text-align: center;
 }
-nav a:link {
-	display:inline-block;
+
+nav ul {
+	display: inline-block;
+}
+
+nav li a:link {
 	text-decoration:none;
 	color:grey;
-	padding-inline: 3%;
+}
+
+nav li img {
+	vertical-align: middle;
+}
+
+nav li {
+	display: inline;
+	padding: 20px;
 }
 
 section.big-text-with-button-and-round-image {
 	text-align: center;
 	margin: 3%;
 	margin-top: 3%;
+	display: block;
 }
 
 section.big-text-with-button-and-round-image div {
-	display: inline-block;
 	padding-inline: 7%;
-	height: 379px;
+	display: inline;
+	float: left;
+	position: relative;
+	left: 60px;
 }
 /* the image is 379 px square and i need to get the text element's box to share this height */
 section.big-text-with-button-and-round-image h1 {
 	font-size: 72px;
 	color: black;
+	margin-top: 75px;
 }
 
 section.big-text-with-button-and-round-image button {
@@ -99,4 +117,11 @@ section.big-text-with-button-and-round-image button {
 	margin-top: 10px;
 	width: 170px;
 	height: 32px;
+	position: relative;
+	right: 60px;
+}
+
+section.big-text-with-button-and-round-image button {
+	display: inline;
+	float: right;
 }
