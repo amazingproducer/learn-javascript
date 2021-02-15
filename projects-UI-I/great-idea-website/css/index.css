@@ -19,7 +19,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	/* I'll comment this zeroed border out to aid in layout visualization */
-	border: 0;
+	/* border: 0; */
 	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
@@ -76,7 +76,8 @@ nav {
 	/* margin: 0 23.25%; */
 	/* text-align: center; */
 	width: 46%;
-	margin: 2% auto;
+	margin: 1% auto;
+	/* height: 3.6rem; */
 }
 
 nav li {
@@ -84,20 +85,20 @@ nav li {
 	/* text-align: center; */
 	/* margin: 0 auto; */
 	/* padding: 0 3%; */
-	width: 13.5%;
+	/* height: 3.6rem; */
+	margin-right: 5%;
 }
 
 nav li a:link {
 	text-decoration:none;
 	color:grey;
 	font-size: .8rem;
+	width: 13.5%;
 	/* padding-top: 3%; */
-	/* margin-right: 15%; */
 }
 
 nav li img {
-	/* I can't get this image's size to be respected by the inline list */
-	/* inline-size: fit-content; */
+	padding-right: 0;
 }
 
 div.header-div {
