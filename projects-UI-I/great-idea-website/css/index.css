@@ -20,7 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	/* I'll comment this zeroed border out to aid in layout visualization */
 	/* border: 0; */
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -72,63 +72,52 @@ h1, h2, h3, h4, h5 {
 	max-width: 100%;
 }
 
-header {
-	margin-top: 28px;
-	display: block;
-	text-align: center;
+nav {
+	/* margin: 0 23.25%; */
+	/* text-align: center; */
+	width: 46%;
+	margin: 0 auto;
 }
 
-nav ul {
+nav li {
 	display: inline-block;
+	/* text-align: center; */
+	/* margin: 0 auto; */
+	/* padding: 0 3%; */
+	width: 13.5%;
 }
 
 nav li a:link {
 	text-decoration:none;
 	color:grey;
+	font-size: .8rem;
+	/* padding-top: 3%; */
+	/* margin-right: 15%; */
 }
 
 nav li img {
+	display: inline-block;
+}
+
+div.header-div {
+	margin: 0 auto;
+	width: 46%;
+	text-align: center;
+	border-bottom: .2rem solid black;
+}
+
+.header-text, .header-image {
+	display: inline-block;
+	width: 40%;
+	margin: 5% auto;
+	text-align: center;
 	vertical-align: middle;
 }
 
-nav li {
-	display: inline;
-	padding: 20px;
-}
-
-section.big-text-with-button-and-round-image {
+div.header-text h1 {
 	text-align: center;
-	margin: 3%;
-	margin-top: 3%;
-	display: block;
-}
-
-section.big-text-with-button-and-round-image div {
-	padding-inline: 7%;
-	display: inline;
-	float: left;
-	position: relative;
-	left: 60px;
-}
-/* the image is 379 px square and i need to get the text element's box to share this height */
-section.big-text-with-button-and-round-image h1 {
-	font-size: 72px;
+	font-size: 5rem;
 	color: black;
-	margin-top: 75px;
 }
 
-section.big-text-with-button-and-round-image button {
-	box-sizing: border-box;
-	border: 1px double black;
-	font-size: 16px;
-	margin-top: 10px;
-	width: 170px;
-	height: 32px;
-	position: relative;
-	right: 60px;
-}
 
-section.big-text-with-button-and-round-image button {
-	display: inline;
-	float: right;
-}
