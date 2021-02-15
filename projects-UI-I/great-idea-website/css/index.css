@@ -76,7 +76,7 @@ nav {
 	/* margin: 0 23.25%; */
 	/* text-align: center; */
 	width: 46%;
-	margin: 0 auto;
+	margin: 2% auto;
 }
 
 nav li {
@@ -96,7 +96,8 @@ nav li a:link {
 }
 
 nav li img {
-	display: inline-block;
+	/* I can't get this image's size to be respected by the inline list */
+	/* inline-size: fit-content; */
 }
 
 div.header-div {
