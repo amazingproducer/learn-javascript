@@ -19,7 +19,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	/* I'll comment this zeroed border out to aid in layout visualization */
-	/* border: 0; */
+	border: 0;
 	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
@@ -101,6 +101,7 @@ nav li img {
 
 div.header-div {
 	margin: 0 auto;
+	padding: 3% 0;
 	width: 46%;
 	text-align: center;
 	border-bottom: .2rem solid black;
@@ -113,6 +114,12 @@ div.header-div {
 	margin-right: 4%;
 	text-align: center;
 	vertical-align: middle;
+}
+
+div.header-text button {
+	border: 1px solid black;
+	padding: 1% 10%;
+	font-size: 1.2rem;
 }
 
 .header-image {
@@ -151,4 +158,18 @@ section.lower {
 div.services-lower, div.product-lower, div.vision-lower {
 	display: inline-block;
 	width: 33%;
+}
+
+section.bottom {
+	width: 46%;
+	margin: 2% auto;
+	text-align: left;
+}
+
+section.bottom p {
+	margin: 1% 0;
+}
+
+section.footer {
+	text-align: center;
 }
