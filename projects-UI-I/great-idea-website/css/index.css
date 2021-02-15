@@ -106,10 +106,20 @@ div.header-div {
 	border-bottom: .2rem solid black;
 }
 
-.header-text, .header-image {
+.header-text {
 	display: inline-block;
-	width: 40%;
-	margin: 5% auto;
+	width: 45%;
+	margin-top: 5%;
+	margin-right: 4%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.header-image {
+	display: inline-block;
+	width: 45%;
+	margin-top: 5%;
+	margin-left: 4%;
 	text-align: center;
 	vertical-align: middle;
 }
@@ -120,4 +130,25 @@ div.header-text h1 {
 	color: black;
 }
 
+section.middle {
+	width: 46%;
+	margin: 2% auto;
+}
 
+div.features-middle, div.about-middle {
+	display: inline-block;
+	width: 49.5%;
+	margin-bottom: 3%;
+}
+
+section.lower {
+	width: 46%;
+	margin: 2% auto;
+	padding-bottom: 3%;
+	border-bottom: .2rem solid black;
+}
+
+div.services-lower, div.product-lower, div.vision-lower {
+	display: inline-block;
+	width: 33%;
+}
