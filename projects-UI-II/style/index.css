@@ -106,7 +106,12 @@ div.header-button {
     align-items:center;
     justify-content: center;
     border: 2px solid black;
+    text-decoration: none;
+}
 
+div.header-button a {
+    text-decoration: none;
+    color: black;
 }
 
 section.project-list {
@@ -139,7 +144,7 @@ footer div {
     align-items: center;
 }
 
-footer div p {
+footer div a {
     text-align: center;
     align-content: center;
     justify-content: center;
@@ -151,4 +156,6 @@ footer div p {
     justify-content: center;
     background: white;
     border: 2px solid black;
+    text-decoration: none;
+    color: black;
 }
