@@ -56,6 +56,7 @@ header {
 }
 
 section.project-list {
+    height: 125vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -70,10 +71,20 @@ div.project-list-item img {
     width: 90%;
 }
 
+/* This is such a mess; I just want to have some space between the project list and the gray footer area */
+
 footer {
-    height: 25vh;
-    background-color: grey;
+    height: 30vh;
+    background-color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+footer div {
+    height: 25vh;
+    width: 100%;
+    background-color: grey;
+    text-align: center;
+    align-content: center;
+    justify-content: flex-end;
 }
