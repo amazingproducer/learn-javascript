@@ -1,1 +1,79 @@
 /* Add CSS styling here */
+/* adapted from: http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	/* I'll comment this zeroed border out to aid in layout visualization */
+	/* border: 0; */
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+* {
+    border: 1px solid grey;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    list-style-type: none;
+}
+nav li#nav-name {
+    flex-basis: 66%;
+}
+
+nav li a {
+    flex-grow: 1;
+    text-decoration: none;
+}
+
+header {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+div.project-list-item {
+    width: 30%;
+    text-align: center;
+}
+
+div.project-list-item img {
+    width: 90%;
+}
+
+footer {
+    height: 25vh;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
