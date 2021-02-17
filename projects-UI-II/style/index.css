@@ -28,6 +28,7 @@ time, mark, audio, video {
 
 * {
     border: 1px solid grey;
+	box-sizing: border-box;
 }
 
 h1 {
@@ -83,11 +84,15 @@ section.project-list {
 
 div.project-list-item {
     width: 30%;
+    height: 40%;
     text-align: center;
+    background-image: url("https://images.pexels.com/photos/230785/pexels-photo-230785.jpeg?crop=entropy&cs=srgb&dl=pexels-bill-emrich-230785.jpg&fit=crop&fm=jpg&h=438&w=640");
+    background-size: contain;
 }
 
-div.project-list-item img {
-    width: 90%;
+div.project-list-item {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 /* div.spacer {
