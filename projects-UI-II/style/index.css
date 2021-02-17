@@ -63,12 +63,13 @@ nav ul {
     width: 35%;
     align-items: center;
     justify-content: flex-end;
+    padding-inline-end: 2rem;
 }
 
 nav li {
     flex-grow: 1;
     width: 24%;
-    height: 50%;
+    height: 40%;
     display: flex;
     justify-content: center;
     text-align: center;
