@@ -23,12 +23,16 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 62.5%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
 }
 
 * {
     /* border: 1px solid grey; */
 	/* box-sizing: border-box; */
+}
+
+body {
+    background: white;
 }
 
 h1 {
@@ -97,6 +101,15 @@ div.header-container {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url("https://images.pexels.com/photos/230785/pexels-photo-230785.jpeg?crop=entropy&cs=srgb&dl=pexels-bill-emrich-230785.jpg&fit=crop&fm=jpg&h=1080&w=1920");
+}
+
+div.header-name {
+    background: transparent;
+}
+div.header-name h1 {
+    background: transparent;
+    text-shadow: .2rem .2rem .3rem white;
 }
 
 div.header-button {
@@ -107,6 +120,7 @@ div.header-button {
     justify-content: center;
     border: 2px solid black;
     text-decoration: none;
+    background: white;
 }
 
 div.header-button a {
