@@ -70,16 +70,14 @@ nav li {
     flex-grow: 1;
     width: 24%;
     height: 40%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    border: 2px solid black;
-}
 
-nav li a {
-    text-decoration: none;
-    color: black;
+    border: 2px solid black;
+
+    display: flex;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* align-items: center; */
+
 }
 
 nav li#nav-home {
@@ -88,7 +86,21 @@ nav li#nav-home {
 
 nav li#nav-home a {
     color: white;
+    /* height: 40%; */
 }
+
+nav li a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+}
+
 
 header {
     display: flex;
@@ -103,6 +115,10 @@ div.header-container {
     align-items: center;
     justify-content: center;
     background-image: url("https://images.pexels.com/photos/230785/pexels-photo-230785.jpeg?crop=entropy&cs=srgb&dl=pexels-bill-emrich-230785.jpg&fit=crop&fm=jpg&h=1080&w=1920");
+    /* background-image: url("https://images.pexels.com/photos/230785/pexels-photo-230785.jpeg?crop=entropy&cs=srgb&dl=pexels-bill-emrich-230785.jpg&fit=crop&fm=jpg&h=540&w=960"); */
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
 }
 
 div.header-name {
@@ -113,15 +129,30 @@ div.header-name h1 {
     text-shadow: .2rem .2rem .3rem white;
 }
 
-div.header-button {
-    padding-inline: 3rem;
+div.header-button a {
+    /* padding-inline: 3rem;
     height: 3rem;
     display: flex;
     align-items:center;
     justify-content: center;
     border: 2px solid black;
     text-decoration: none;
+    background: white; */
+
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+
+    padding-inline: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
     background: white;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+
 }
 
 div.header-button a {
@@ -150,6 +181,8 @@ div.project-list-image {
     height: 100%;
     background-image: url("https://images.pexels.com/photos/230785/pexels-photo-230785.jpeg?crop=entropy&cs=srgb&dl=pexels-bill-emrich-230785.jpg&fit=crop&fm=jpg&h=438&w=640");
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
