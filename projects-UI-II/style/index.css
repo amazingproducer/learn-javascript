@@ -80,13 +80,11 @@ nav li {
 
 }
 
-nav li#nav-home {
+nav li.nav-current-page {
     background: black;
 }
-
-nav li#nav-home a {
+nav li.nav-current-page a {
     color: white;
-    /* height: 40%; */
 }
 
 nav li a {
